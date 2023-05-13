@@ -53,19 +53,19 @@ code {
   column-gap: 20px;
 }
 
-.btn-grp>button{
+.btn-grp>button {
   height: 30px;
   width: 30px;
   padding: 5px;
   cursor: pointer;
-  
+
 }
-.success{
+
+.success {
   color: #47F558;
 
 }
 
-.error{
+.error {
   color: #E33737;
-
 }
