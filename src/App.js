@@ -9,10 +9,21 @@ function App() {
 
 
   const validation = (e) => {
+    if (num1 == "") {     
+      setMsg("Error :  Num1 cannot be empty");
+      setResult("");
+      return;
+    }
+    else if (num2 == "") {
+      setMsg("Error :  Num2 cannot be empty");
+      setResult("");
+      return;
+    }
     const num1Val = Number(num1);
     const num2Val = Number(num2);
     let resultVal = "";
   console.log(e.target.innerText)
+  
     if (isNaN(num1Val) || isNaN(num2Val)) {
       setMsg("Error: Please enter valid numbers");
     } else {
@@ -51,7 +62,7 @@ function App() {
         <button onClick={validation}>*</button>
         <button onClick={validation}>/</button>
       </div>
-      <div className='res'>{result === 0 ? "0" : result}</div>
+      <div className='res'>{result === "" ? "" : result}</div>
       <div className={msg.includes("Success") ? "success" : "error"}>{msg}</div>
     </div>
   );
